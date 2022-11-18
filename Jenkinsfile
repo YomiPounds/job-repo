@@ -7,8 +7,10 @@ pipeline {
             }  
         }
         stage("resource chk") {
-            sh "lscpu"
-            echo "So easy to forget stuff"
+            steps {
+               sh "lscpu"
+               echo "So easy to forget stuff"
+            } 
         }
     }
 }
